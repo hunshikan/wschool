@@ -1,5 +1,6 @@
 package com.heping.interceptor;
 
+import com.heping.util.Const;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,8 +20,12 @@ public class LoginHandlerInterceptor extends HandlerInterceptorAdapter{
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 		// TODO Auto-generated method stub
-
-		return true;
+		String path = request.getServletPath();
+		if(path.matches(Const.NO_INTERCEPTOR_PATH)){
+			return true;
+		}else {
+			return false;
+		}
 		}
 	}
 	

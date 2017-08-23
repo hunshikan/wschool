@@ -29,7 +29,7 @@ public class LoginController extends BaseController{
     @RequestMapping(value = "/login_login")
     public ModelAndView toLogin() throws Exception{
         ModelAndView mv=this.getModelAndView();
-        mv.setViewName("system/index/main");
+        mv.setViewName("system/public/index");
         PageData pd = new PageData();
         pd.put("USERNAME", "1");
         pd.put("PASSWORD", "1");

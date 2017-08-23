@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="UserMapper">
+	
+	<!--表名 -->
+	<sql id="tableName">
+		SYS_USER
+	</sql>
+	
+	<!-- 字段 -->
+	<sql id="Field">
+        USER_ID,
+		USERNAME,
+		PASSWORD,
+	</sql>
+	
+	<!-- 字段值 -->
+	<sql id="FieldValue">
+        #{USER_ID},
+		#{USERNAME},
+		#{PASSWORD},
+	</sql>
+
+	
+	<!-- 通过ID获取数据 -->
+	<select id="getUserInfo" parameterType="pd" resultType="pd">
+		select
+		USER_ID,
+		USERNAME,
+		PASSWORD
+		from
+		SYS_USER
+		where 1=1
+		<if test="USERNAME!=null and PASSWORD!=null">
+			and USERNAME = #{USERNAME} and PASSWORD=#{PASSWORD}
+		</if>
+	</select>
+	
+
+</mapper>

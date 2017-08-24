@@ -1,6 +1,6 @@
 layui.use(['element'], function(){
 	$ = layui.jquery;
-  	element = layui.element(); 
+  	element = layui.element; 
   
   //导航的hover效果、二级菜单等功能，需要依赖element模块
   // 侧边栏点击隐藏兄弟元素
@@ -10,16 +10,16 @@ layui.use(['element'], function(){
 
 	$('.layui-tab-title li').eq(0).find('i').remove();
 
-	height = $('.layui-layout-admin .site-demo').height();
-	$('.layui-layout-admin .site-demo').height(height-100);
+	height = $('.layui-layout-admin .site-demo').height;
+	$('.layui-layout-admin .site-demo').height=height-100;
 
-	if($(window).width()<750){
+	if($(window).width<750){
 		trun = 0;
-		$('.x-slide_left').css('background-position','0px -61px');
+		
 	}else{
 		trun = 1;
 	}
-	$('.x-slide_left').click(function(event) {
+	$('.larry-side-menu').click(function(event) {
 		if(trun){
 			$('.x-side').animate({left: '-200px'},200).siblings('.x-main').animate({left: '0px'},200);
 			$(this).css('background-position','0px -61px');

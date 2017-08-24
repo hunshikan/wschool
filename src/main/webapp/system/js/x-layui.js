@@ -18,7 +18,7 @@ function x_admin_show(title,url,w,h){
 		w=800;
 	};
 	if (h == null || h == '') {
-		h=($(window).height() - 50);
+		h=($(window).height - 50);
 	};
 	layer.open({
 		type: 2,

@@ -29,6 +29,7 @@
 		<property name="locations">  
 			<list>  
                  <value>classpath:dbconfig.properties</value>
+
             </list>  
         </property>  
 	</bean> 

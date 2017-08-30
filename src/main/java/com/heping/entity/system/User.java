@@ -1,7 +1,4 @@
 package com.heping.entity.system;
-
-
-
 /**
  * 
 * 类名称：用户
@@ -34,18 +31,12 @@ public class User {
 		this.PASSWORD = PASSWORD;
 	}
 
-	public String getNAME() {
-		return NAME;
-	}
 
-	public void setNAME(String NAME) {
-		this.NAME = NAME;
-	}
 
 	private String USER_ID;		//用户id
 	private String USERNAME;	//用户名
 	private String PASSWORD; 	//密码
-	private String NAME;		//姓名
+
 
 
 

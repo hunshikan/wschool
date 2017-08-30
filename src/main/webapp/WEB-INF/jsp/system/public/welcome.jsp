@@ -7,190 +7,153 @@
             + request.getServerName() + ":" + request.getServerPort()
             + path + "/";
 %>
+
 <html>
 <head>
     <meta charset="utf-8">
-    <title>
-        wschool
-    </title>
-    <%@ include file="top.jsp"%>
+    <title>wschool后台管理模板</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="static/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_tnyc012u2rlwstt9.css" media="all" />
+    <link rel="stylesheet" href="static/css/main.css" media="all" />
 </head>
-<body>
-<div class="x-body">
-    <blockquote class="layui-elem-quote">
-        欢迎来到wschool后台管理！<span class="f-14">v1.0</span>官方交流群： 1455682411
-    </blockquote>
-    <p>登录次数：18 </p>
-    <p>上次登录IP：222.35.131.79.1  上次登录时间： 2017-01-01 11:19:55</p>
-    <fieldset class="layui-elem-field layui-field-title site-title">
-        <legend><a name="default">信息统计</a></legend>
-    </fieldset>
-    <table class="layui-table">
-        <thead>
-        <tr>
-            <th>统计</th>
-            <th>资讯库</th>
-            <th>图片库</th>
-            <th>产品库</th>
-            <th>用户</th>
-            <th>管理员</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>总数</td>
-            <td>92</td>
-            <td>9</td>
-            <td>0</td>
-            <td>8</td>
-            <td>20</td>
-        </tr>
-        <tr>
-            <td>今日</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td>昨日</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td>本周</td>
-            <td>2</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td>本月</td>
-            <td>2</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-        </tr>
-        </tbody>
-    </table>
-    <table class="layui-table">
-        <thead>
-        <tr>
-            <th colspan="2" scope="col">服务器信息</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th width="30%">服务器计算机名</th>
-            <td><span id="lbServerName">http://127.0.0.1/</span></td>
-        </tr>
-        <tr>
-            <td>服务器IP地址</td>
-            <td>192.168.1.1</td>
-        </tr>
-        <tr>
-            <td>服务器域名</td>
-            <td>x.xuebingsi.com</td>
-        </tr>
-        <tr>
-            <td>服务器端口 </td>
-            <td>80</td>
-        </tr>
-        <tr>
-            <td>服务器IIS版本 </td>
-            <td>Microsoft-IIS/6.0</td>
-        </tr>
-        <tr>
-            <td>本文件所在文件夹 </td>
-            <td>D:\WebSite\HanXiPuTai.com\XinYiCMS.Web\</td>
-        </tr>
-        <tr>
-            <td>服务器操作系统 </td>
-            <td>Microsoft Windows NT 5.2.3790 Service Pack 2</td>
-        </tr>
-        <tr>
-            <td>系统所在文件夹 </td>
-            <td>C:\WINDOWS\system32</td>
-        </tr>
-        <tr>
-            <td>服务器脚本超时时间 </td>
-            <td>30000秒</td>
-        </tr>
-        <tr>
-            <td>服务器的语言种类 </td>
-            <td>Chinese (People's Republic of China)</td>
-        </tr>
-        <tr>
-            <td>.NET Framework 版本 </td>
-            <td>2.050727.3655</td>
-        </tr>
-        <tr>
-            <td>服务器当前时间 </td>
-            <td>2017-01-01 12:06:23</td>
-        </tr>
-        <tr>
-            <td>服务器IE版本 </td>
-            <td>6.0000</td>
-        </tr>
-        <tr>
-            <td>服务器上次启动到现在已运行 </td>
-            <td>7210分钟</td>
-        </tr>
-        <tr>
-            <td>逻辑驱动器 </td>
-            <td>C:\D:\</td>
-        </tr>
-        <tr>
-            <td>CPU 总数 </td>
-            <td>4</td>
-        </tr>
-        <tr>
-            <td>CPU 类型 </td>
-            <td>x86 Family 6 Model 42 Stepping 1, GenuineIntel</td>
-        </tr>
-        <tr>
-            <td>虚拟内存 </td>
-            <td>52480M</td>
-        </tr>
-        <tr>
-            <td>当前程序占用内存 </td>
-            <td>3.29M</td>
-        </tr>
-        <tr>
-            <td>Asp.net所占内存 </td>
-            <td>51.46M</td>
-        </tr>
-        <tr>
-            <td>当前Session数量 </td>
-            <td>8</td>
-        </tr>
-        <tr>
-            <td>当前SessionID </td>
-            <td>gznhpwmp34004345jz2q3l45</td>
-        </tr>
-        <tr>
-            <td>当前系统用户名 </td>
-            <td>NETWORK SERVICE</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<div class="layui-footer footer footer-demo">
-    <div class="layui-main">
-        <p>感谢各位程序员的大力支持</p>
-        <p>
-            <a href="/">
-                Copyright ©2017 wschool v1.0 All Rights Reserved.
-            </a>
-        </p>
+<body class="childrenBody">
+<div class="panel_box row">
+    <div class="panel col">
+        <a href="javascript:;" data-url="page/message/message.html">
+            <div class="panel_icon">
+                <i class="layui-icon" data-icon="&#xe63a;">&#xe63a;</i>
+            </div>
+            <div class="panel_word newMessage">
+                <span></span>
+                <cite>新消息</cite>
+            </div>
+        </a>
+    </div>
+    <div class="panel col">
+        <a href="javascript:;" data-url="page/user/allUsers.html">
+            <div class="panel_icon" style="background-color:#FF5722;">
+                <i class="iconfont icon-dongtaifensishu" data-icon="icon-dongtaifensishu"></i>
+            </div>
+            <div class="panel_word userAll">
+                <span></span>
+                <cite>新增人数</cite>
+            </div>
+        </a>
+    </div>
+    <div class="panel col">
+        <a href="javascript:;" data-url="page/user/allUsers.html">
+            <div class="panel_icon" style="background-color:#009688;">
+                <i class="layui-icon" data-icon="&#xe613;">&#xe613;</i>
+            </div>
+            <div class="panel_word userAll">
+                <span></span>
+                <cite>用户总数</cite>
+            </div>
+        </a>
+    </div>
+    <div class="panel col">
+        <a href="javascript:;" data-url="page/img/images.html">
+            <div class="panel_icon" style="background-color:#5FB878;">
+                <i class="layui-icon" data-icon="&#xe64a;">&#xe64a;</i>
+            </div>
+            <div class="panel_word imgAll">
+                <span></span>
+                <cite>图片总数</cite>
+            </div>
+        </a>
+    </div>
+    <div class="panel col">
+        <a href="javascript:;" data-url="page/news/newsList.html">
+            <div class="panel_icon" style="background-color:#F7B824;">
+                <i class="iconfont icon-wenben" data-icon="icon-wenben"></i>
+            </div>
+            <div class="panel_word waitNews">
+                <span></span>
+                <cite>待审核文章</cite>
+            </div>
+        </a>
+    </div>
+    <div class="panel col max_panel">
+        <a href="javascript:;" data-url="page/news/newsList.html">
+            <div class="panel_icon" style="background-color:#2F4056;">
+                <i class="iconfont icon-text" data-icon="icon-text"></i>
+            </div>
+            <div class="panel_word allNews">
+                <span></span>
+                <em>文章总数</em>
+                <cite>文章列表</cite>
+            </div>
+        </a>
     </div>
 </div>
-<%@ include file="foot.jsp"%>
+<blockquote class="layui-elem-quote explain">
+    <p>本系统基于Layui最新版2.02实现<a href="javascript:;" target="_blank" class="layui-btn layui-btn-mini layui-btn-danger">码云下载</a><a href="javascript:;" target="_blank" class="layui-btn layui-btn-mini layui-btn-danger">GitHub下载</a>　</p>
+    <p>开发文档地址：<a class="layui-btn layui-btn-mini" target="_blank" href="http://www.layui.com/doc">点此跳转</a> <a class="layui-btn layui-btn-mini layui-btn-danger" target="_blank" href="http://fly.layui.com/case/u/3198216">我要点赞</a></p>
+</blockquote>
+<div class="row">
+    <div class="sysNotice col">
+        <blockquote class="layui-elem-quote title">更新日志</blockquote>
+        <div class="layui-elem-quote layui-quote-nm">
+
+            <p>2017年8月25号</p>
+        </div>
+    </div>
+    <div class="sysNotice col">
+        <blockquote class="layui-elem-quote title">系统基本参数</blockquote>
+        <table class="layui-table">
+            <colgroup>
+                <col width="150">
+                <col>
+            </colgroup>
+            <tbody>
+            <tr>
+                <td>当前版本</td>
+                <td class="version"></td>
+            </tr>
+            <tr>
+                <td>开发作者</td>
+                <td class="author"></td>
+            </tr>
+            <tr>
+                <td>网站首页</td>
+                <td class="homePage"></td>
+            </tr>
+            <tr>
+                <td>服务器环境</td>
+                <td class="server"></td>
+            </tr>
+            <tr>
+                <td>数据库版本</td>
+                <td class="dataBase"></td>
+            </tr>
+            <tr>
+                <td>最大上传限制</td>
+                <td class="maxUpload"></td>
+            </tr>
+            <tr>
+                <td>当前用户权限</td>
+                <td class="userRights"></td>
+            </tr>
+            </tbody>
+        </table>
+        <blockquote class="layui-elem-quote title">最新文章<i class="iconfont icon-new1"></i></blockquote>
+        <table class="layui-table" lay-skin="line">
+            <colgroup>
+                <col>
+                <col width="110">
+            </colgroup>
+            <tbody class="hot_news"></tbody>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript" src="static/layui/layui.js"></script>
+<script type="text/javascript" src="static/js/main.js"></script>
 </body>
 </html>

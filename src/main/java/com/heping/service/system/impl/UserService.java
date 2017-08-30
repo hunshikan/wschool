@@ -32,6 +32,7 @@ public class UserService implements UserManager{
 	 * @param pd
 	 * @throws Exception
 	 */
+
 	public void delete(PageData pd)throws Exception{
 		dao.delete("UserMapper.delete", pd);
 	}

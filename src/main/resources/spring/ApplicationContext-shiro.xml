@@ -25,20 +25,21 @@
 		<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
 			<property name="securityManager" ref="securityManager" />
 			
-			<property name="loginUrl" value="/" />
+			<property name="loginUrl" value="/login_login" />
 			
-			<property name="successUrl" value="/" />
+			<property name="successUrl" value="/index" />
 			
-			<property name="unauthorizedUrl" value="/login_toLogin" />
+			<property name="unauthorizedUrl" value="/login_login" />
 			
 			<property name="filterChainDefinitions">
 				<value>
-				/plugins/keypad/** 			= anon
-				/system/** 				    = anon
+				/plugins/** 			    = anon
+				/static/** 				    = anon
 				/uploadFiles/uploadImgs/** 	= anon
-	           	/login_login	 			= anon
+	           	/Do_login	 			    = anon
+                /code/getGifCode.do         = anon
+				/**						    = authc
 				</value>
 			</property>
 		</bean>
-   
 </beans>

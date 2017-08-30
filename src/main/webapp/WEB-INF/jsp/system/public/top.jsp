@@ -5,5 +5,4 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" href="system/css/font-awesome.min.css" media="all">
-<link rel="stylesheet" href="system/css/x-admin.css" media="all">
+<link rel="stylesheet" href="static/css/x-admin.css" media="all">

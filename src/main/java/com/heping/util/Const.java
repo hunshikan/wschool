@@ -22,7 +22,7 @@ public class Const {
 	public static final String DEPARTMENT_ID = "DEPARTMENT_ID";				//当前用户拥有的最高部门权限
 	public static final String TRUE = "T";
 	public static final String FALSE = "F";
-	public static final String LOGIN = "/login_toLogin.do";					//登录地址
+	public static final String LOGIN = "/login_login.do";					//登录地址
 	public static final String SYSNAME = "admin/config/SYSNAME.txt";		//系统名称路径
 	public static final Integer PAGE = 10;			//分页条数配置
 	public static final String EMAIL = "admin/config/EMAIL.txt";			//邮箱服务器配置路径
@@ -37,7 +37,7 @@ public class Const {
 	public static final String FILEPATHFILE = "uploadFiles/file/";			//文件上传路径
 	public static final String FILEPATHFILEOA = "uploadFiles/uploadFile/";	//文件上传路径(oa管理)
 	public static final String FILEPATHTWODIMENSIONCODE = "uploadFiles/twoDimensionCode/"; //二维码存放路径
-	public static final String NO_INTERCEPTOR_PATH = ".*/((login)|(logout)|(welcome)|(system)|(index)|(list)).*";	//不对匹配该值的访问路径拦截（正则）
+	public static final String NO_INTERCEPTOR_PATH = ".*/((login)|(logout)|(welcome)|(static)|(index)|(Do_login)|(code)).*";	//不对匹配该值的访问路径拦截（正则）
 	public static ApplicationContext WEB_APP_CONTEXT = null; //该值会在web容器启动时由WebAppContextListener初始化
 	
 	/**

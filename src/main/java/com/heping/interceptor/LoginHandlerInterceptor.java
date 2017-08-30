@@ -1,12 +1,14 @@
 package com.heping.interceptor;
 
+import com.heping.entity.system.User;
 import com.heping.util.Const;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.session.Session;
+import org.apache.shiro.subject.Subject;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-
 /**
  * 
 * 类名称：登录过滤，权限验证
@@ -24,7 +26,16 @@ public class LoginHandlerInterceptor extends HandlerInterceptorAdapter{
 		if(path.matches(Const.NO_INTERCEPTOR_PATH)){
 			return true;
 		}else {
-			return false;
+			//shiro管理session
+			Subject currentUser = SecurityUtils.getSubject();
+			Session session = currentUser.getSession();
+            User user=(User)session.getAttribute(Const.SESSION_USER);
+            if(user!=null){
+                return true;
+            }else{
+                response.sendRedirect(request.getContextPath()+Const.LOGIN);
+                return false;
+            }
 		}
 		}
 	}
